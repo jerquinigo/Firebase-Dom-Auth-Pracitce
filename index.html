@@ -2,9 +2,14 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-app.js"></script>
     <script src="./firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-auth.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-database.js"></script>
+
     <script src="./secret.js"></script>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"/>
     <script src = '/node_modules/clientside-require/dist/bundle.js'></script>
     <title>firebase auth practice</title>
@@ -15,15 +20,15 @@
         <h1 class="col s12 m12">Firebase Auth</h1>
       </div>
       <div class="row">
-        <input type="text"  class="autoComplete col s6 m 6" placeholder="email"/>
+        <input type="text" id="txtEmail"class="autoComplete col s6 m 6" placeholder="email"/>
       </div>
       <div class="row">
-        <input type="password"  class="autoComplete col s6 m 6" placeholder="password"/>
+        <input type="password" id="txtPassword" class="autoComplete col s6 m 6" placeholder="password"/>
       </div>
       <div class="row">
-        <button class="btn">Sign Up</button>
-        <button class="btn">Login</button>
-        <button class="btn">Logout</button>
+        <button id="btnSignUp" class="btn">Sign Up</button>
+        <button id="btnLogin" class="btn">Login</button>
+        <button id="btnLogout"class="btn">Logout</button>
       </div>
 
     </div>

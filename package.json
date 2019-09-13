@@ -9,6 +9,7 @@
   "author": "jonathan.e",
   "license": "ISC",
   "dependencies": {
-    "clientside-require": "^4.7.2"
+    "clientside-require": "^4.7.2",
+    "firebase": "^6.6.1"
   }
 }
