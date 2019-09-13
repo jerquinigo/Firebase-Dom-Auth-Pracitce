@@ -42,11 +42,19 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+btnLogout.addEventListener("click", e => {
+  firebase.auth().signOut();
+});
+
 //realtime listener
 firebase.auth().onAuthStateChanged(firebaseUser => {
+  debugger;
   if (firebaseUser) {
     console.log(firebaseUser);
+    console.log("here");
+    btnLogout.classList.remove("hide");
   } else {
     console.log("not logged in");
+    btnLogout.classList.add("hide");
   }
 });
