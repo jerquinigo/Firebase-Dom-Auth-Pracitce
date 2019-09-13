@@ -1,8 +1,7 @@
-const secret = require("./secret.json");
-const apikey = secret.apikey;
 document.addEventListener("DOMContentLoaded", () => {
+  console.log(key, "da key");
   const firebaseConfig = {
-    apiKey: `${apikey}`,
+    apiKey: key,
     authDomain: "fir-dom-auth-practice.firebaseapp.com",
     databaseURL: "https://fir-dom-auth-practice.firebaseio.com",
     projectId: "fir-dom-auth-practice",

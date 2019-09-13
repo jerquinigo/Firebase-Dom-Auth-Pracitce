@@ -4,25 +4,28 @@
     <meta charset="utf-8">
     <script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-app.js"></script>
     <script src="./firebase.js"></script>
+    <script src="./secret.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"/>
+    <script src = '/node_modules/clientside-require/dist/bundle.js'></script>
     <title>firebase auth practice</title>
   </head>
   <body>
     <div class="container">
+        <div class="row">
+        <h1 class="col s12 m12">Firebase Auth</h1>
+      </div>
       <div class="row">
-    <h1 class="col s12 m12">Firebase Auth</h1>
-    </div>
-
-      <div class="row">
-
         <input type="text"  class="autoComplete col s6 m 6" placeholder="email"/>
-
       </div>
       <div class="row">
-
         <input type="password"  class="autoComplete col s6 m 6" placeholder="password"/>
-
       </div>
+      <div class="row">
+        <button class="btn">Sign Up</button>
+        <button class="btn">Login</button>
+        <button class="btn">Logout</button>
+      </div>
+
     </div>
   </body>
 </html>
