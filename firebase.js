@@ -25,11 +25,28 @@ document.addEventListener("DOMContentLoaded", () => {
     //get email and password
     let email = txtEmail.value;
     let password = txtPassword.value;
-    debugger;
     const auth = firebase.auth();
     //sign in
     console.log(email);
     const promise = auth.signInWithEmailAndPassword(email, password);
     promise.catch(e => console.log(e.message));
   });
+
+  btnSignUp.addEventListener("click", e => {
+    let email = txtEmail.value;
+    let password = txtPassword.value;
+    const auth = firebase.auth();
+
+    //sign up
+    const promise = auth.createUserWithEmailAndPassword(email, password);
+  });
+});
+
+//realtime listener
+firebase.auth().onAuthStateChanged(firebaseUser => {
+  if (firebaseUser) {
+    console.log(firebaseUser);
+  } else {
+    console.log("not logged in");
+  }
 });
